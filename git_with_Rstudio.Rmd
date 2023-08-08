@@ -33,6 +33,8 @@ Issues trouble shooting git tab in Rstudio. The git executable on windows should
 
 use "where git" in H dirve to find on C:\\Program Files\\Git\\cmd\\git.exe and follow this guide [Mike Nguyen](https://mikenguyen.netlify.app/post/missing-git-tab-in-rstudio-on-windows-computer/)
 
+It is an issue that one cannot remove files from command line using rm / rm -r or git rm 
+
 
 
 ```{r}
