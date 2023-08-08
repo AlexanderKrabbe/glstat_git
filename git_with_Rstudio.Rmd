@@ -33,9 +33,20 @@ Issues trouble shooting git tab in Rstudio. The git executable on windows should
 
 use "where git" in H dirve to find on C:\\Program Files\\Git\\cmd\\git.exe and follow this guide [Mike Nguyen](https://mikenguyen.netlify.app/post/missing-git-tab-in-rstudio-on-windows-computer/)
 
-It is an issue that one cannot remove files from command line using rm / rm -r or git rm 
+
+# It is an issue that one cannot remove files from command line using rm / rm -r or git rm 
 
 testing if the git GUi function in collboration with Rstduio
+
+# When opening an exisitng directory under version control e.i git init from command line, 
+follow the explanation here [Guide on posit](support.posit.co/hc/en-us/articles/200532077).\\
+in short
+\item execute *New project* from påroject menu
+\item create new project from an existing directory
+\item select apporproate directory and click *create project*
+
+This is counter intuitive to me that I cannot just open any file or project existing in the directory that I have initialised a git repository in but I have to open a new project from an existing project from **within** Rstudio.
+
 
 ```{r}
 
