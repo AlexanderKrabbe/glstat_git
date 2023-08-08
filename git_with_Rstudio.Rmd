@@ -35,7 +35,7 @@ use "where git" in H dirve to find on C:\\Program Files\\Git\\cmd\\git.exe and f
 
 It is an issue that one cannot remove files from command line using rm / rm -r or git rm 
 
-
+testing if the git GUi function in collboration with Rstduio
 
 ```{r}
 
