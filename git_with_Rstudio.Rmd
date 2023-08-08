@@ -29,7 +29,9 @@ This could be GitLabs or Gitea. My gut feeling is that this should be outsourced
 I have previously used ssh connection to github and so will continue using SSH although Happy git with R suggest https PAT tokens.
 
 
-Issues trouble shooting git tab in Rstudio.
+Issues trouble shooting git tab in Rstudio. The git executable on windows should be placed correctly.
+
+use "where git" in H dirve to find on C:\\Program Files\\Git\\cmd\\git.exe and follow this guide [Mike Nguyen](https://mikenguyen.netlify.app/post/missing-git-tab-in-rstudio-on-windows-computer/)
 
 
 
