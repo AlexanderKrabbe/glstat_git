@@ -1,0 +1,45 @@
+---
+author: "Alexander Krabbe"
+title: "Introducing Git in Rstudio at statgl"
+output: html_notebook
+params: 
+  author: "Alexander Krabbe"
+---
+
+This notebook is meant as a learning-by-doing example for me `r params$author`
+document my thoughts an experiences trying to implement git into the work 
+rutines of statgl using Rstuido. 
+
+# Introduction
+
+This guide will contain my experiences throughout the search for git integration
+with Rstudio for R development at statgl.
+ 
+At the beginning of this tutorial Lars P has gotten IT support to install git,
+git bash, git shell and git gui on the H drive.
+ 
+Following the guide [Happy git with R](http://www.happygitwithr.com) this guide
+assumes the repositories to be stored locally and pushed to github.com. 
+Lars P would like the option for self hosting to be explored. 
+
+This could be GitLabs or Gitea. My gut feeling is that this should be outsourced to github or gitlab EE. 
+
+
+ 
+I have previously used ssh connection to github and so will continue using SSH although Happy git with R suggest https PAT tokens.
+
+
+
+
+Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+
+```{r}
+
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
