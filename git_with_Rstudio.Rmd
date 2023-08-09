@@ -31,7 +31,8 @@ I have previously used ssh connection to github and so will continue using SSH a
 
 Issues trouble shooting git tab in Rstudio. The git executable on windows should be placed correctly.
 
-use "where git" in H dirve to find on C:\\Program Files\\Git\\cmd\\git.exe and follow this guide [Mike Nguyen](https://mikenguyen.netlify.app/post/missing-git-tab-in-rstudio-on-windows-computer/)
+use "where git" in H dirve to find on C:\\Program Files\\Git\\cmd\\git.exe and follow this guide [Mike Nguyen](https://mikenguyen.netlify.app/post/missing-git-tab-in-rstudio-on-windows-computer/) ***OBS*** following Happy Git with R the /cmd/ folder should never be used instead point to /bin/git.exe
+
 
 
 ### It is an issue that one cannot remove files from command line using rm / rm -r or git rm 
@@ -40,11 +41,14 @@ testing if the git GUi function in collboration with Rstduio
 
 ### When opening an exisitng directory under version control e.i git init from command line
 
-follow the explanation here [Guide on posit](support.posit.co/hc/en-us/articles/200532077).\\
-in short
-\item execute *New project* from påroject menu
-\item create new project from an existing directory
-\item select apporproate directory and click *create project*
+follow the explanation here [Guide on posit](support.posit.co/hc/en-us/articles/200532077).
+
+In short
+
+ * execute *New project* from project menu
+ * create new project from an existing directory
+ * select apporproate directory and click *create project*
+
 
 This is counter intuitive to me that I cannot just open any file or project
 existing in the directory that I have initialized a git repository in but I have
@@ -58,3 +62,12 @@ import numpy as np
 x = 2 + 2
 print(x)
 ```
+
+
+## Getting git to work in Rstudio
+continued issues with this. I thought the issues where related to the placement of git originally pointed to the /cmd/ which is a no go instead Rstudio should point to the git in the /bin/
+
+ * existing project without version control
+ * existing project with version
+ 
+However, the issue with opening existing projects under version control (e.i. git ini from command line can come from the administrators having ownership of different folders with the ID: 'S-1-5-32-544' a known administrator group id in windows accoring to a google search not saved)
