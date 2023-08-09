@@ -41,7 +41,7 @@ testing if the git GUi function in collboration with Rstduio
 
 ### When opening an exisitng directory under version control e.i git init from command line
 
-follow the explanation here [Guide on posit](support.posit.co/hc/en-us/articles/200532077).
+follow the explanation here [Guide on posit](https://support.posit.co/hc/en-us/articles/200532077).
 
 In short
 
