@@ -70,4 +70,5 @@ continued issues with this. I thought the issues where related to the placement 
  * existing project without version control
  * existing project with version
  
-However, the issue with opening existing projects under version control (e.i. git ini from command line can come from the administrators having ownership of different folders with the ID: 'S-1-5-32-544' a known administrator group id in windows accoring to a google search not saved)
+However, the issue with opening existing projects under version control (e.i. git ini from command line can come from the administrators having ownership of different folders with the ID: 'S-1-5-32-544' a known administrator group id in windows accoring to [TheCodingAnalyst](https://medium.com/@thecodinganalyst/git-detect-dubious-ownership-in-repository-e7f33037a8f)
+
