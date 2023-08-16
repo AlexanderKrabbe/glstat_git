@@ -72,3 +72,59 @@ continued issues with this. I thought the issues where related to the placement 
  
 However, the issue with opening existing projects under version control (e.i. git ini from command line can come from the administrators having ownership of different folders with the ID: 'S-1-5-32-544' a known administrator group id in windows accoring to [TheCodingAnalyst](https://medium.com/@thecodinganalyst/git-detect-dubious-ownership-in-repository-e7f33037a8f)
 
+
+## Getting git to work on windwosexplorer
+
+I have succesfully "git init" a new repository from within Rstuduio project and from the windowsexplorer (cmd line) and later open a new project in Rstduio with existing version control. 
+
+### cloning a reposiroty
+All of this testing is done from the sam git user and should be re-tested with two different git accounts. 
+
+ * I have cloned repository A from Alices home folder to a new repository B located in Bobs home folder
+ * Bob can now successfully clone, fetch and pull anything from Alice however Bob cannot **push** to remote repository A on Alices home folder
+ * This is because Alice is still "checkout" on main.
+ * I have found a couple of solutions to this. One was to create A to be a *bare* repo at Alices home folder but I do not see this as a viable option
+
+### Solution 1 
+ * Either repository B on Bobs home folder should be pointed to remote fetch/push to repository A on Alices home folder. 
+ * This can be done with ***git remote add origin "adress to A on Alices"***
+ * and then see if successful with ***git remote -v***
+ In this case ***NO PERSON*** should push to either repository and only use pull, when in need of the changes made by the other
+
+### Solution 2
+ * Alice detaches from the main branch by either
+ * git checkout --detach
+ * or by git checkout -b tmp
+ 
+In this case Alice releases her "HEAD" and Bob can successfully push his latest commits to Alices repository A on alices home folder. By detaching there is no branch and I think this whould easily create conflicts where as the feature branch seems more likely to yield which merge conflicts there is and fix them one by one when checkout to the main branch again. 
+
+### Solution 3
+ * I think a dedicated git server solves this problem in a social construct more than in a technical construct. 
+ * By having a dedicated git server I think it is easier to see "who" owns which repositories and instead of cloning others repositories one would fork (server side) and clone (server ot locale) and work ( locale side ) on the feature by one self before pushing the commits ( locale to server ) and make a pull request ( server to server )
+ 
+### Discussion
+I think a workflow with git can be achieved without a dedicated git server.
+
+In this case I could see (at the moment of writing) two viable options.
+
+1. option 
+
+all S: /STAT folders with code and markdown and publications should be initialised with a central git user for all of stat. For this experimental thought is will be call "gs".
+
+everybody uses their standard username as their git user and "fork" / "clone" the repository they work in do their work in their home folder and commit changes.
+
+people then go back in the main folder and pull their changes with the "gs" account
+
+2. option 
+
+less security and more trust
+
+everybody simply clone the repository they want to work in and when finish push back their changes to the repository. (one caveat they need to push changes to an "import" branch from which they merge into the main branch when in the origin repository or checkout into a tmp repo befor pushing changes)
+
+3. option 
+
+I investigte the even less secure and more trusty version
+Everybody opens the Rstduio project at hand. make changes. Save to locale folder. stash / add changes to version control, commit with a propriate commit message
+
+The issue I have run into here is the fact that git does not "like" work well when two different owners try to manipulate the same git repository
+
