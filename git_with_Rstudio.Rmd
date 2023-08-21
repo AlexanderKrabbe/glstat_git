@@ -128,3 +128,15 @@ Everybody opens the Rstduio project at hand. make changes. Save to locale folder
 
 The issue I have run into here is the fact that git does not "like" work well when two different owners try to manipulate the same git repository
 
+This could also be done with simply having one and just one git user "gs" whom everybody uses. But then data about who did the changes and committed them is removed.
+
+
+## Test I need to run
+
+* Create new Rproject in a noremal folder enabling git repo. 
+* Create new Rprojct in a already init git folder
+
+* Replicate on Network Drive
+* Replicate on .local
+* Replicate on Client
+
